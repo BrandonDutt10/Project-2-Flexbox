@@ -3,10 +3,7 @@ html {
   box-sizing: border-box;
 }
 
-
-*, 
-*:before, 
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
@@ -22,7 +19,6 @@ a {
 	width: 97%;
 	max-width: 1200px;
 	margin: 0 auto;
-	float: none;
 	background-color: #fff;
 }
 
@@ -37,63 +33,37 @@ div img {
 	flex-flow: row wrap;
 }
 
-
 [class*="col-"] {
 	margin-left: 4%;
 	flex: 0 0 92%;
 }
 
 
-.col-1 {
-	background-color: #A3CDD9;
-}
-
-.col-2 {
-	background-color: #FFFCE6;
-}
-
-/* NEW columns for rows 3–5 */
-
-.col-3 {
-	background-color: #D9F2D9;
-}
-
-.col-4 {
-	background-color: #F6D8AE;
-}
+.col-1 { background-color: #A3CDD9; }
+.col-2 { background-color: #FFFCE6; }
+.col-3 { background-color: #D9F2D9; }
+.col-4 { background-color: #F6D8AE; }
 
 
-
-@media only screen and (min-width: 480px)  {
-	
-  .col-1,
-  .col-2 {
-		flex: 0 0 44%;
-	}
-
-  .col-3 {
-		flex: 0 0 92%;
-	}
-
+@media only screen and (min-width: 480px) {
+  .col-1, .col-2 { flex: 0 0 44%; }
+  .col-3 { flex: 0 0 92%; }
 }
 
 
 @media only screen and (min-width: 768px) {
-  
- 	.col-1 {
-		flex: 0 0 20%;
-	}
-  
-	.col-2 {
-		flex: 0 0 44%;
-	}
+  .col-1 { flex: 0 0 20%; }
+  .col-2 { flex: 0 0 44%; }
+  .col-3 { flex: 0 0 68%; }
+  .col-4 { flex: 0 0 92%; }
 
-	.col-3 {
-		flex: 0 0 68%;
-	}
-
-	.col-4 {
-		flex: 0 0 92%;
-	}
-
+ 
+  .row:last-child .col-1 { flex: 0 0 18%; }
 }
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
